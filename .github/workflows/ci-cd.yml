@@ -47,6 +47,6 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           script: |
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
-            docker stop app || true
-            docker rm app || true
-            docker run -d -p 1975:3000 --name app ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
+            docker stop ekAman || true
+            docker rm ekAman || true
+            docker run -d -p 1975:3000 --name ekAman ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
